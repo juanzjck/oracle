@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+  p Hola bienvenido a #{title}
+  p Agrega un deseo a la lista de deseos 
+  form(action="/",method="POST") 
+    label(for="wish") Tu 
+    input(type="text",name="wish")
+    label(for="wish") Tu deseo 
+    input(type="text",name="wish")
+    button() guardar
+  table(class="table") 
+    tr
+      td 
+        h2 Deseo 
+      td
+        h2 acciones
+    tr
+      td 
+        h2 Mi de deseo
+      td
+        a() editar 
+        a() eliminar 
+        

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    div(class="container")
+        div(class="clearfix")
+            h1=post[1]
+            img(src=post[3], class="col-md-6 float-md-end mb-3 ms-md-3",alt="...")
+            p=post[2]
+    div(class="container")
+      
+        div(class="row")
+            div(class="col align-self-start")
+                form(action='../../post/comment/'+post[0],method='POST')
+                    div( class="mb-3")
+                        label(for="comment")
+                        textarea(type="text",name='comment',id="comment") 
+                    button(type="submit",class="btn btn-primary") Enviar comentaario
+        div(class="success alert—check")    
+          p=result
+          h1=Comentarios
+        div(class="row")
+            each comment in comments
+                div(class="card" style="width: 18rem;")
+                    div(class="card-body")
+                        p(class="card-text")=comment[2]
