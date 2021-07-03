@@ -1,6 +1,7 @@
 const oracledb = require('oracledb');
 
-oracledb.initOracleClient({ libDir: 'C:\\oracle\\instantclient_19_11' });
+oracledb.initOracleClient({ libDir: process.env.DATA_KEY||'C:\\oracle\\instantclient_19_11' });
+
 
 
 class Db {
