@@ -2,10 +2,9 @@ FROM oraclelinux:7-slim
 
 RUN  yum -y install oracle-instantclient-release-el7 && \
      yum -y install oracle-instantclient-basic oracle-instantclient-devel oracle-instantclient-sqlplus && \
-     rm -rf /var/cache/yum
+     rm -rf /var/cache/yum \
+     sudo yum install nodejs
 
-
-FROM node:12.18.2 as build
 
 
 WORKDIR /app
