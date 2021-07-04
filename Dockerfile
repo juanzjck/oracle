@@ -1,6 +1,7 @@
+FROM docker pull store/oracle/database-instantclient:12.2.0.1
+
 FROM node:12.18.2 as build
 
-COPY /usr/lib/oracle/21/client64/lib /usr/lib/oracle/21/client64/lib
 
 WORKDIR /app
 
