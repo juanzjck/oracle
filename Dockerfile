@@ -1,7 +1,5 @@
 FROM store/oracle/database-instantclient:12.2.0.1
 
-
-
 FROM node:12.18.2 as build
 
 
