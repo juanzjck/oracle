@@ -1,4 +1,9 @@
-FROM store/oracle/database-instantclient:12.2.0.1
+FROM oraclelinux:7-slim
+
+RUN  yum -y install oracle-instantclient-release-el7 && \
+     yum -y install oracle-instantclient-basic oracle-instantclient-devel oracle-instantclient-sqlplus && \
+     rm -rf /var/cache/yum
+
 
 FROM node:12.18.2 as build
 
